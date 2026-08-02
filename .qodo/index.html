@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="ambient" style="--blob-x:20%; --blob-y:20%;"></div>
+    <div class="noise"></div>
+
+    <div class="shell">
+
+        <!-- ============ SIDEBAR ============ -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round">
+                        <path d="M3 12h4l2 7 4-14 2 7h6" />
+                    </svg>
+                </div>
+                <div class="brand-name">Pulse<span>.</span></div>
+            </div>
+
+            <nav class="nav">
+                <div class="nav-label">Menu</div>
+                <div class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="9" rx="2" />
+                        <rect x="14" y="3" width="7" height="5" rx="2" />
+                        <rect x="14" y="12" width="7" height="9" rx="2" />
+                        <rect x="3" y="16" width="7" height="5" rx="2" />
+                    </svg>
+                    Overview
+                </div>
+                <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 3v18h18" />
+                        <path d="M7 15l4-5 3 3 5-7" />
+                    </svg>
+                    Analytics
+                </div>
+                <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="4" width="16" height="16" rx="3" />
+                        <path d="M9 9h6v6H9z" />
+                    </svg>
+                    Reports
+                </div>
+                <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="6" width="20" height="13" rx="3" />
+                        <path d="M2 10h20" />
+                    </svg>
+                    Wallet
+                </div>
+                <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="8" />
+                        <path d="M12 8v4l3 2" />
+                    </svg>
+                    History
+                </div>
+            </nav>
+
+            <nav class="nav">
+                <div class="nav-label">Preferences</div>
+                <div class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1-1.6 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.9.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.9V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z" />
+                    </svg>
+                    Settings
+                </div>
+            </nav>
+
+            <div class="sidebar-foot">
+                <div class="upgrade-card">
+                    <strong>Go Pro ⚡</strong>
+                    <p>Unlock real-time alerts and unlimited report exports.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ============ MAIN ============ -->
+        <main class="main">
+
+            <div class="topbar">
+                <div class="greeting">
+                    <h1>Welcome back, Aryan 👋</h1>
+                    <p><span class="dot"></span>All systems live — data synced moments ago</p>
+                </div>
+                <div class="top-actions">
+                    <div class="search">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="7" />
+                            <path d="M21 21l-4-4" />
+                        </svg>
+                        Search metrics…
+                    </div>
+                    <div class="icon-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.7 21a2 2 0 01-3.4 0" />
+                        </svg>
+                        <span class="badge"></span>
+                    </div>
+                    <div class="avatar">AR</div>
+                </div>
+            </div>
+
+            <!-- Stat Cards -->
+            <section class="stats">
+                <div class="card">
+                    <div class="card-top">
+                        <div class="card-icon icon-violet">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1v22" />
+                                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                            </svg>
+                        </div>
+                        <div class="trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <path d="M4 20L20 4M20 4H8M20 4v12" />
+                            </svg>12.4%</div>
+                    </div>
+                    <div class="card-label">Total Revenue</div>
+                    <div class="card-number"><span class="prefix">$</span><span id="n1"></span></div>
+                    <svg class="spark v" viewBox="0 0 200 40" preserveAspectRatio="none">
+                        <path d="M0,32 L25,28 L50,30 L75,18 L100,22 L125,10 L150,14 L175,4 L200,8" />
+                    </svg>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <div class="card-icon icon-teal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                                <path d="M16 3.13a4 4 0 010 7.75" />
+                            </svg>
+                        </div>
+                        <div class="trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <path d="M4 20L20 4M20 4H8M20 4v12" />
+                            </svg>8.1%</div>
+                    </div>
+                    <div class="card-label">Active Users</div>
+                    <div class="card-number"><span id="n2"></span></div>
+                    <svg class="spark t" viewBox="0 0 200 40" preserveAspectRatio="none">
+                        <path d="M0,20 L25,24 L50,16 L75,22 L100,12 L125,18 L150,6 L175,12 L200,2" />
+                    </svg>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <div class="card-icon icon-amber">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
+                            </svg>
+                        </div>
+                        <div class="trend down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <path d="M4 4l16 16M20 4H8M20 4v12" />
+                            </svg>2.3%</div>
+                    </div>
+                    <div class="card-label">Conversion Rate</div>
+                    <div class="card-number"><span id="n3"></span></div>
+                    <svg class="spark a" viewBox="0 0 200 40" preserveAspectRatio="none">
+                        <path d="M0,10 L25,14 L50,8 L75,20 L100,16 L125,26 L150,22 L175,30 L200,28" />
+                    </svg>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <div class="card-icon icon-coral">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3 3" />
+                            </svg>
+                        </div>
+                        <div class="trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <path d="M4 20L20 4M20 4H8M20 4v12" />
+                            </svg>5.7%</div>
+                    </div>
+                    <div class="card-label">Avg. Session</div>
+                    <div class="card-number"><span id="n4"></span></div>
+                    <svg class="spark c" viewBox="0 0 200 40" preserveAspectRatio="none">
+                        <path d="M0,24 L25,18 L50,26 L75,14 L100,20 L125,10 L150,16 L175,6 L200,12" />
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Line chart + Donut -->
+            <section class="grid-main">
+                <div class="panel">
+                    <div class="panel-head">
+                        <div>
+                            <div class="panel-title">Revenue Growth</div>
+                            <div class="panel-sub">Comparing this quarter against the last</div>
+                        </div>
+                        <div class="tabs">
+                            <div class="tab active">3M</div>
+                            <div class="tab">6M</div>
+                            <div class="tab">1Y</div>
+                        </div>
+                    </div>
+
+                    <div class="chart-wrap">
+                        <svg viewBox="0 0 620 230" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#7c6cf0" />
+                                    <stop offset="100%" stop-color="#12d6c2" />
+                                </linearGradient>
+                                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#7c6cf0" stop-opacity="0.35" />
+                                    <stop offset="100%" stop-color="#7c6cf0" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+
+                            <line class="grid-line" x1="0" y1="10" x2="620" y2="10" />
+                            <line class="grid-line" x1="0" y1="65" x2="620" y2="65" />
+                            <line class="grid-line" x1="0" y1="120" x2="620" y2="120" />
+                            <line class="grid-line" x1="0" y1="175" x2="620" y2="175" />
+
+                            <path class="area-fill" fill="url(#areaGrad)"
+                                d="M0,150 L60,130 L120,145 L180,95 L240,110 L300,60 L360,80 L420,40 L480,55 L540,20 L600,35 L600,230 L0,230 Z" />
+
+                            <path class="line-path-2"
+                                d="M0,180 L60,170 L120,175 L180,150 L240,160 L300,130 L360,140 L420,115 L480,125 L540,95 L600,105" />
+                            <path class="line-path"
+                                d="M0,150 L60,130 L120,145 L180,95 L240,110 L300,60 L360,80 L420,40 L480,55 L540,20 L600,35" />
+
+                            <circle class="chart-dot" cx="540" cy="20" r="5" fill="#12d6c2" stroke="#090b11"
+                                stroke-width="3" />
+                        </svg>
+                    </div>
+                    <div class="x-labels">
+                        <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head">
+                        <div>
+                            <div class="panel-title">Traffic Sources</div>
+                            <div class="panel-sub">Where visitors come from</div>
+                        </div>
+                    </div>
+                    <div class="donut-wrap">
+                        <div class="donut">
+                            <div class="donut-center">
+                                <div class="num">24.8k</div>
+                                <div class="lbl">Sessions</div>
+                            </div>
+                        </div>
+                        <div class="donut-legend">
+                            <div class="dl-row">
+                                <div class="dl-left"><span class="dl-dot"
+                                        style="background:var(--violet)"></span>Organic Search</div><span
+                                    class="dl-val">42%</span>
+                            </div>
+                            <div class="dl-row">
+                                <div class="dl-left"><span class="dl-dot" style="background:var(--teal)"></span>Social
+                                    Media</div><span class="dl-val">31%</span>
+                            </div>
+                            <div class="dl-row">
+                                <div class="dl-left"><span class="dl-dot"
+                                        style="background:var(--amber)"></span>Referral</div><span
+                                    class="dl-val">19%</span>
+                            </div>
+                            <div class="dl-row">
+                                <div class="dl-left"><span class="dl-dot"
+                                        style="background:rgba(255,255,255,0.25)"></span>Direct</div><span
+                                    class="dl-val">8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom row -->
+            <section class="grid-bottom">
+                <div class="panel">
+                    <div class="panel-head">
+                        <div>
+                            <div class="panel-title">Weekly Activity</div>
+                            <div class="panel-sub">Interactions per day</div>
+                        </div>
+                    </div>
+                    <div class="bars">
+                        <div class="bar-col">
+                            <div class="bar"></div><span>M</span>
+                        </div>
+                        <div class="bar-col">
+                            <div class="bar"></div><span>T</span>
+                        </div>
+                        <div class="bar-col">
+                            <div class="bar"></div><span>W</span>
+                        </div>
+                        <div class="bar-col">
+                            <div class="bar"></div><span>T</span>
+                        </div>
+                        <div class="bar-col">
+                            <div class="bar"></div><span>F</span>
+                        </div>
+                        <div class="bar-col">
+                            <div class="bar"></div><span>S</span>
+                        </div>
+                        <div class="bar-col">
+                            <div class="bar"></div><span>S</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head">
+                        <div>
+                            <div class="panel-title">Monthly Goal</div>
+                            <div class="panel-sub">Target completion</div>
+                        </div>
+                    </div>
+                    <div class="gauge-wrap">
+                        <div class="gauge">
+                            <div class="gauge-val">
+                                <div class="num">68%</div>
+                                <div class="lbl">of $50,000</div>
+                            </div>
+                        </div>
+                        <div class="gauge-foot"><span>0</span><span>Goal: $50k</span></div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-head">
+                        <div>
+                            <div class="panel-title">Recent Activity</div>
+                            <div class="panel-sub">Latest transactions</div>
+                        </div>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-row">
+                            <div class="a-icon icon-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <path d="M12 19V5M5 12l7-7 7 7" />
+                                </svg></div>
+                            <div class="a-body">
+                                <div class="a-title">Payment received</div>
+                                <div class="a-time">2 min ago · Stripe</div>
+                            </div>
+                            <div class="a-amt pos">+$420</div>
+                        </div>
+                        <div class="activity-row">
+                            <div class="a-icon icon-coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <path d="M12 5v14M5 12l7 7 7-7" />
+                                </svg></div>
+                            <div class="a-body">
+                                <div class="a-title">Server hosting</div>
+                                <div class="a-time">1 hr ago · AWS</div>
+                            </div>
+                            <div class="a-amt neg">-$89</div>
+                        </div>
+                        <div class="activity-row">
+                            <div class="a-icon icon-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M9 12l2 2 4-4" />
+                                </svg></div>
+                            <div class="a-body">
+                                <div class="a-title">New subscriber</div>
+                                <div class="a-time">3 hr ago · Pro plan</div>
+                            </div>
+                            <div class="a-amt pos">+$29</div>
+                        </div>
+                        <div class="activity-row">
+                            <div class="a-icon icon-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <path d="M20 7L9 18l-5-5" />
+                                </svg></div>
+                            <div class="a-body">
+                                <div class="a-title">Invoice paid</div>
+                                <div class="a-time">6 hr ago · Client B</div>
+                            </div>
+                            <div class="a-amt pos">+$1,240</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
