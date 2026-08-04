@@ -1,2 +1,17 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Auto-detect text files and normalize line endings to LF in the repo
+* text=auto eol=lf
+
+# Explicit rules for common types in this project
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+
+# Images and binary files should never be modified by line-ending normalization
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  text eol=lf
+*.ico  binary
