@@ -41,7 +41,7 @@ No installation or build step required.
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/pulse-dashboard.git
+   git clone  https://github.com/nindekararyan-pixel/pulse-dashboard.git
    ```
 2. Open `dashboard.html` directly in your browser.
 
